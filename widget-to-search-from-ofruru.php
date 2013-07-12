@@ -1,15 +1,17 @@
 <?php
 /**
- * @version 1.1.1
+ * @version 1.1.2
  */
 /*
-Plugin Name: widget to search from ofru.ru
+Plugin Name: Widget to search from ofru.ru
+Plugin URI: http://ofru.ru/widgets/?l=en
 Description: Enables a Custom Search Engine for your site via a widget. To add goto Appearance > Widgets. Thank you for choosing my widget.
-Author: Milyutin Alexander Vyacheslavovich (Disabled by cerebral palsy)
-Version: 1.1.1
+Author: Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)
+Donate link: http://ofru.ru/help/en/ 
+Version: 1.1.2
 Author URI: http://ofru.ru/
 License: GPLv2
-Copyright 2013 Milyutin Alexander Vyacheslavovich (email : admin@ofru.ru)
+Copyright 2013 Milyutin Aleksandr Vyacheslavovich (email : admin@ofru.ru)
 */
 
 
