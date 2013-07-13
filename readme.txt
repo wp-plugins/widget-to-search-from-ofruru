@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: ofru
 Donate link: http://ofru.ru/help/en
-Tags: Tags: allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, widget
-Requires at least: 3
+Tags: Tags: allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, widget
+Requires at least: 2.8
 Tested up to: 3.5.2
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ Installation
 
 
 == Changelog ==
+= 1.1.4 =
+* fix
+
 = 1.1.3 =
 * update translations for : Russian, Ukrainian  
 
