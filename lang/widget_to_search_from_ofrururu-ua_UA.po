@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: widget to search from ofru.ru 1.1.1\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-12 20:54+0400\n"
-"PO-Revision-Date: 2013-07-12 20:56+0400\n"
+"Project-Id-Version: widget to search from ofru.ru 1.1.3\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/widget-to-search-from-ofruru\n"
+"POT-Creation-Date: 2013-07-12 21:43:03+00:00\n"
+"PO-Revision-Date: 2013-07-13 01:50+0400\n"
 "Last-Translator: Milutin Alexander V. <admin@ofru.ru>\n"
 "Language-Team: Мілютін Олександр В'ячеславович <admin@ofru.ru>\n"
 "Language: uk_UA\n"
@@ -16,15 +16,15 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: widget-to-search-from-ofruru.php:32 widget-to-search-from-ofruru.php:107
+#: widget-to-search-from-ofruru.php:34 widget-to-search-from-ofruru.php:109
 msgid "Search this site from"
 msgstr "Пошук по сайту від"
 
-#: widget-to-search-from-ofruru.php:47
+#: widget-to-search-from-ofruru.php:49
 msgid "Search"
 msgstr ""
 
-#: widget-to-search-from-ofruru.php:48
+#: widget-to-search-from-ofruru.php:50
 msgid ""
 "This widget can be <a target=\"_blank\" href=\"http://ofru.ru/widgets/?l=en"
 "\">downloaded here</a>"
@@ -32,39 +32,63 @@ msgstr ""
 "Цей віджет можна <a target=\"_blank\" href=\"http://ofru.ru/widgets/?l=ua"
 "\">завантажити тут</a>"
 
-#: widget-to-search-from-ofruru.php:72
+#: widget-to-search-from-ofruru.php:74
 #, fuzzy
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: widget-to-search-from-ofruru.php:77
+#: widget-to-search-from-ofruru.php:79
 msgid "Domain:"
 msgstr "Домен:"
 
-#: widget-to-search-from-ofruru.php:81
+#: widget-to-search-from-ofruru.php:83
 msgid "or"
 msgstr "або"
 
-#: widget-to-search-from-ofruru.php:87
+#: widget-to-search-from-ofruru.php:89
 msgid "Language site:"
 msgstr "Мова сайту:"
 
-#: widget-to-search-from-ofruru.php:88
+#: widget-to-search-from-ofruru.php:90
 msgid "Russian"
 msgstr "Російський"
 
-#: widget-to-search-from-ofruru.php:90
+#: widget-to-search-from-ofruru.php:92
 msgid "Ukrainian"
 msgstr "Український"
 
-#: widget-to-search-from-ofruru.php:92
+#: widget-to-search-from-ofruru.php:94
 msgid "English"
 msgstr "Аанглійський"
 
-#: widget-to-search-from-ofruru.php:96
+#: widget-to-search-from-ofruru.php:98
 msgid "Box Width"
 msgstr "Ширина поля"
 
-#: widget-to-search-from-ofruru.php:100
+#: widget-to-search-from-ofruru.php:102
 msgid "Help promote the plugin: \"widget to search from ofru.ru\"?"
 msgstr "Допомагати просувати плагін: \"віджет для пошуку від ofru.ru\"?"
+
+#. Plugin Name of the plugin/theme
+msgid "Widget to search from ofru.ru"
+msgstr "Ввіджет для пошуку від ofru.ru"
+
+#. Plugin URI of the plugin/theme
+msgid "http://ofru.ru/widgets/?l=en"
+msgstr "http://ofru.ru/widgets/?l=ua"
+
+#. Description of the plugin/theme
+msgid ""
+"Enables a Custom Search Engine for your site via a widget. To add goto "
+"Appearance > Widgets. Thank you for choosing my widget."
+msgstr ""
+"Включає систему користувальницького пошуку для вашого сайту за допомогою "
+"віджета. Щоб додати перейти Зовнішній вигляд > Віджети. Дякую вам за вибір."
+
+#. Author of the plugin/theme
+msgid "Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)"
+msgstr "Мілютін Олександр В'ячеславович (Інвалід за ДЦП)"
+
+#. Author URI of the plugin/theme
+msgid "http://ofru.ru/"
+msgstr "http://ofru.ru/"
