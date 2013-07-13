@@ -10,6 +10,8 @@ Author: Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)
 Donate link: http://ofru.ru/help/en/ 
 Version: 1.1.3
 Author URI: http://ofru.ru/
+Text Domain: widget-to-search-from-ofruru
+Domain Path: /lang
 License: GPLv2
 Copyright 2013 Milyutin Aleksandr Vyacheslavovich (email : admin@ofru.ru)
 */
@@ -27,11 +29,11 @@ return $nowww;
 // Enable translations
 add_action('init', 'widget_to_search_from_ofruru_textdomain');
 function widget_to_search_from_ofruru_textdomain() {
-load_plugin_textdomain('widget_to_search_from_ofruru', false, dirname(plugin_basename(__FILE__)) . '/lang');
+load_plugin_textdomain('widget-to-search-from-ofruru', false, dirname(plugin_basename(__FILE__)) . '/lang');
 } 
 class widget_to_search_from_ofruru extends WP_Widget {
 function widget_to_search_from_ofruru() {
-parent::WP_Widget(false, $name = __('Search this site from', 'widget_to_search_from_ofruru'). ' ofru.ru');
+parent::WP_Widget("widget-to-search-from-ofruru", $name = __('Widget to search from ofru.ru', 'widget-to-search-from-ofruru'));
 }
 
 function widget($args, $instance) {
@@ -47,7 +49,7 @@ $instance = array_merge( $this->_get_default_options(), $instance );
 <input type="text" name="q" size="<?php echo $instance['width']; ?>" />
 <input type="hidden" name="l" value="<?php echo $instance['lang']; ?>" />
 <input type="submit" name="sa" value="<?php _e('Search'); ?>" />
-<br><?php if ($instance['helplink']) _e('This widget can be <a target="_blank" href="http://ofru.ru/widgets/?l=en">downloaded here</a>' , 'widget_to_search_from_ofruru'); ?>
+<br><?php if ($instance['helplink']) _e('This widget can be <a target="_blank" href="http://ofru.ru/widgets/?l=en">downloaded here</a>' , 'widget-to-search-from-ofruru'); ?>
 </form>
 <?php
 }
@@ -76,22 +78,22 @@ $helplink = esc_attr($instance['helplink']);
 </label>
 </p>
 <p>
-<label for="<?php echo $this->get_field_id('h'); ?>"><?php _e('Domain:', 'widget_to_search_from_ofruru'); ?>
+<label for="<?php echo $this->get_field_id('h'); ?>"><?php _e('Domain:', 'widget-to-search-from-ofruru'); ?>
 <br>
 <label for='<?php echo $this->get_field_id('h'); ?>WWW'><input class="radio" id='<?php echo $this->get_field_id('h'); ?>WWW' type="radio" name="<?php echo $this->get_field_name('h'); ?>" value="www." <?php if ($h == 'www.') echo 'checked'; ?>><?php echo 'www.'. widget_to_search_from_ofruru_domain(); ?></label>
 <br>
-<?php _e('or', 'widget_to_search_from_ofruru'); ?>
+<?php _e('or', 'widget-to-search-from-ofruru'); ?>
 <br>
 <label for='<?php echo $this->get_field_id('h'); ?>NOWWW'><input class="radio" id="<?php echo $this->get_field_id('h'); ?>NOWWW" type="radio" name="<?php echo $this->get_field_name('h'); ?>" value="0" <?php if ($h == '0') echo 'checked'; ?>><?php echo  widget_to_search_from_ofruru_domain(); ?></label>
 </label>
 </p>
 <p>
-<label for="<?php echo $this->get_field_id('lang'); ?>"><?php _e('Language site:', 'widget_to_search_from_ofruru'); ?><br>
-<label for='<?php echo $this->get_field_id('lang'); ?>LR'><input class="radio" id='<?php echo $this->get_field_id('lang'); ?>LR' type="radio" name="<?php echo $this->get_field_name('lang'); ?>" value="ru" <?php if ($lang == 'ru') echo 'checked'; ?>><?php _e('Russian', 'widget_to_search_from_ofruru'); ?></label>
+<label for="<?php echo $this->get_field_id('lang'); ?>"><?php _e('Language site:', 'widget-to-search-from-ofruru'); ?><br>
+<label for='<?php echo $this->get_field_id('lang'); ?>LR'><input class="radio" id='<?php echo $this->get_field_id('lang'); ?>LR' type="radio" name="<?php echo $this->get_field_name('lang'); ?>" value="ru" <?php if ($lang == 'ru') echo 'checked'; ?>><?php _e('Russian', 'widget-to-search-from-ofruru'); ?></label>
 <br>
-<label for='<?php echo $this->get_field_id('lang'); ?>Lua'><input class="radio" id="<?php echo $this->get_field_id('lang'); ?>Lua" type="radio" name="<?php echo $this->get_field_name('lang'); ?>" value="ua" <?php if ($lang == 'ua') echo 'checked'; ?>><?php _e('Ukrainian', 'widget_to_search_from_ofruru'); ?></label>
+<label for='<?php echo $this->get_field_id('lang'); ?>Lua'><input class="radio" id="<?php echo $this->get_field_id('lang'); ?>Lua" type="radio" name="<?php echo $this->get_field_name('lang'); ?>" value="ua" <?php if ($lang == 'ua') echo 'checked'; ?>><?php _e('Ukrainian', 'widget-to-search-from-ofruru'); ?></label>
 <br>
-<label for='<?php echo $this->get_field_id('lang'); ?>Len'><input class="radio" id="<?php echo $this->get_field_id('lang'); ?>Len" type="radio" name="<?php echo $this->get_field_name('lang'); ?>" value="en" <?php if ($lang == 'en') echo 'checked'; ?>><?php _e('English', 'widget_to_search_from_ofruru'); ?></label>
+<label for='<?php echo $this->get_field_id('lang'); ?>Len'><input class="radio" id="<?php echo $this->get_field_id('lang'); ?>Len" type="radio" name="<?php echo $this->get_field_name('lang'); ?>" value="en" <?php if ($lang == 'en') echo 'checked'; ?>><?php _e('English', 'widget-to-search-from-ofruru'); ?></label>
 </label>
 
 <p>
@@ -99,14 +101,14 @@ $helplink = esc_attr($instance['helplink']);
 <input class="widefat" id="<?php echo $this->get_field_id('width'); ?>" name="<?php echo $this->get_field_name('width'); ?>" type="text" value="<?php echo $instance['width']; ?>" />
 </label>
 </p>
-<label for='<?php echo $this->get_field_id('helplink'); ?>'><input class="checkbox" id="<?php echo $this->get_field_id('helplink'); ?>" type="checkbox" name="<?php echo $this->get_field_name('helplink'); ?>" value="1" <?php if ($helplink) echo 'checked'; ?>><?php _e('Help promote the plugin: "widget to search from ofru.ru"?', 'widget_to_search_from_ofruru'); ?></label>
+<label for='<?php echo $this->get_field_id('helplink'); ?>'><input class="checkbox" id="<?php echo $this->get_field_id('helplink'); ?>" type="checkbox" name="<?php echo $this->get_field_name('helplink'); ?>" value="1" <?php if ($helplink) echo 'checked'; ?>><?php _e('Help promote the plugin: "widget to search from ofru.ru"?', 'widget-to-search-from-ofruru'); ?></label>
 </p>
 
 <?php
 }
  function _get_default_options() {
         return array(
-            'title' => __('Search this site from', 'widget_to_search_from_ofruru'). ' ofru.ru',
+            'title' => __('Search this site from', 'widget-to-search-from-ofruru'). ' ofru.ru',
             'h' => '0',
             'helplink' => '1',
 	    'width' => '17',
