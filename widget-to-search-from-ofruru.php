@@ -1,7 +1,4 @@
 <?php
-/**
- * @version 1.1.2
- */
 /*
 Plugin Name: Widget to search from ofru.ru
 Plugin URI: http://ofru.ru/widgets/?l=en
@@ -26,14 +23,10 @@ $nowww = $_SERVER["HTTP_HOST"];
 }
 return $nowww;
 }
-// Enable translations
-add_action('init', 'widget_to_search_from_ofruru_textdomain');
-function widget_to_search_from_ofruru_textdomain() {
-load_plugin_textdomain('widget-to-search-from-ofruru', false, dirname(plugin_basename(__FILE__)) . '/lang');
-} 
+ 
 class widget_to_search_from_ofruru extends WP_Widget {
 function widget_to_search_from_ofruru() {
-parent::WP_Widget("widget-to-search-from-ofruru", $name = __('Widget to search from ofru.ru', 'widget-to-search-from-ofruru'));
+parent::WP_Widget('widget-to-search-from-ofruru', $name = __('Widget to search from ofru.ru', 'widget-to-search-from-ofruru'));
 }
 
 function widget($args, $instance) {
@@ -97,7 +90,7 @@ $helplink = esc_attr($instance['helplink']);
 </label>
 
 <p>
-<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Box Width'); ?>:
+<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Box Width', 'widget-to-search-from-ofruru'); ?>:
 <input class="widefat" id="<?php echo $this->get_field_id('width'); ?>" name="<?php echo $this->get_field_name('width'); ?>" type="text" value="<?php echo $instance['width']; ?>" />
 </label>
 </p>
@@ -116,6 +109,9 @@ $helplink = esc_attr($instance['helplink']);
         );
     }
 }
-add_action('widgets_init', create_function('', 'return register_widget("widget_to_search_from_ofruru");'));
-
+add_action('widgets_init', 'widget_to_search_from_ofruru_init');
+function widget_to_search_from_ofruru_init() {
+load_plugin_textdomain('widget-to-search-from-ofruru', false, 'widget-to-search-from-ofruru/lang');
+	register_widget('widget_to_search_from_ofruru');
+}
 ?>
