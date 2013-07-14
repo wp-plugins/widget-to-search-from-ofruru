@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: ofru
 Donate link: http://ofru.ru/help/en
-Tags: Tags: allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, widget
+Tags: allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, widget
 Requires at least: 2.8
 Tested up to: 3.5.2
 Stable tag: 1.1.4
@@ -16,8 +16,8 @@ Enables a Custom Search Engine for your site via a widget.
 
 ### Features:
 
-*   Works with any WordPress Theme
-*	Just add the "Site Search" widget to your theme.
+*	Works with any WordPress Theme
+*	Just add a "Widget to search from ofru.ru" on your site.
 *	Does not replace the default WordPress search. It runs along with it. Use both if you want.
 
 
