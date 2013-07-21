@@ -35,6 +35,12 @@ Installation
 1. Click **Appearance** > **Widgets** > Drag the **Widget to search from ofru.ru** widget to a widget area.
 
 
+== Screenshots ==
+
+1. Widget options
+
+
+
 == Changelog ==
 = 1.1.4 =
 * fix
