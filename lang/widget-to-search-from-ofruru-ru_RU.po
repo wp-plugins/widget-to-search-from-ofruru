@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: widget to search from ofru.ru 1.1.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/widget-to-search-from-ofruru\n"
+"POT-Creation-Date: 2013-07-13 14:42:24+00:00\n"
+"PO-Revision-Date: 2013-07-13 18:47+0400\n"
+"Last-Translator: Milutin Alexander V. <admin@ofru.ru>\n"
+"Language-Team: Милютин Александр Вячеславович <admin@ofru.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_c;__ngettext;_n;rvy_po_trigger\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#. #-#-#-#-#  plugin.pot (Widget to search from ofru.ru 1.1.3)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: widget-to-search-from-ofruru.php:29
+msgid "Widget to search from ofru.ru"
+msgstr "Виджет для поиска от ofru.ru"
+
+#: widget-to-search-from-ofruru.php:44
+msgid "Search"
+msgstr ""
+
+#: widget-to-search-from-ofruru.php:45
+msgid ""
+"This widget can be <a target=\"_blank\" href=\"http://ofru.ru/widgets/?l=en"
+"\">downloaded here</a>"
+msgstr ""
+"Этот виджет можно <a target=\"_blank\" href=\"http://ofru.ru/widgets/"
+"\">скачать тут</a>"
+
+#: widget-to-search-from-ofruru.php:69
+#, fuzzy
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: widget-to-search-from-ofruru.php:74
+msgid "Domain:"
+msgstr "Домен:"
+
+#: widget-to-search-from-ofruru.php:78
+msgid "or"
+msgstr "или"
+
+#: widget-to-search-from-ofruru.php:84
+msgid "Language site:"
+msgstr "Язык сайта:"
+
+#: widget-to-search-from-ofruru.php:85
+msgid "Russian"
+msgstr "Русский"
+
+#: widget-to-search-from-ofruru.php:87
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: widget-to-search-from-ofruru.php:89
+msgid "English"
+msgstr "Английский"
+
+#: widget-to-search-from-ofruru.php:93
+msgid "Box Width"
+msgstr "Ширина поля"
+
+#: widget-to-search-from-ofruru.php:97
+msgid "Help promote the plugin: \"widget to search from ofru.ru\"?"
+msgstr "Помогать продвигать плагин: \"виджет для поиска от ofru.ru\"?"
+
+#: widget-to-search-from-ofruru.php:104
+msgid "Search this site from"
+msgstr "Поиск по сайту от"
+
+#. Plugin URI of the plugin/theme
+msgid "http://ofru.ru/widgets/?l=en"
+msgstr "http://ofru.ru/widgets/"
+
+#. Description of the plugin/theme
+msgid ""
+"Enables a Custom Search Engine for your site via a widget. To add goto "
+"Appearance > Widgets. Thank you for choosing my widget."
+msgstr ""
+"Включает систему пользовательского поиска для вашего сайта с помощью "
+"виджета. Чтобы добавить перейдите : Внешний вид > Виджеты.  Благодарю вас за "
+"выбор."
+
+#. Author of the plugin/theme
+msgid "Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)"
+msgstr "Милютин Александр Вячеславович (Инвалид по ДЦП)"
+
+#. Author URI of the plugin/theme
+msgid "http://ofru.ru/"
+msgstr "http://ofru.ru/"
