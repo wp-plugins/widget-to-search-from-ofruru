@@ -5,7 +5,7 @@ Plugin URI: http://ofru.ru/widgets/?l=en
 Description: Enables a Custom Search Engine for your site via a widget. To add goto Appearance > Widgets. Thank you for choosing my widget.
 Author: Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)
 Donate link: http://ofru.ru/help/en/ 
-Version: 1.2
+Version: 1.2.1
 Author URI: http://ofru.ru/
 Text Domain: widget-to-search-from-ofruru
 Domain Path: /lang
@@ -28,7 +28,7 @@ $instance = array_merge( $this->_get_default_options(), $instance );
 . $after_title;
 ?>
 <form target="_blank" action="http://allislocated.ru/" enctype="application/x-www-form-urlencoded" method="get">
-<input type="hidden" name="h" value="<?php echo $instance['siteurl']; ?>" />
+<input type="hidden" name="h" value="<?php echo get_option('siteurl'); ?>" />
 <input type="text" name="q" size="<?php echo $instance['width']; ?>" />
 <input type="hidden" name="l" value="<?php echo $instance['lang']; ?>" />
 <input type="submit" name="sa" value="<?php _e('Search'); ?>" />
@@ -39,14 +39,9 @@ $instance = array_merge( $this->_get_default_options(), $instance );
 
 function update($new_instance, $old_instance) {
 $instance = $old_instance;
-$h = get_option('siteurl');
-
-if (substr($h,0,7)=='http://') $h = substr($h,7);
-elseif (substr($h,0,8)=='https://') $h = substr($h,8); 
 
 $instance['title'] = esc_attr($new_instance['title']);
 $instance['lang'] = $new_instance['lang'];
-$instance['siteurl'] = $h; 
 $instance['helplink'] = $new_instance['helplink'];
 $instance['width'] = $new_instance['width'];
 return $instance;
@@ -84,15 +79,8 @@ $helplink = esc_attr($instance['helplink']);
 <?php
 }
  function _get_default_options() {
-
-$h = get_option('siteurl');
-
-if (substr($h,0,7)=='http://') $h = substr($h,7);
-elseif (substr($h,0,8)=='https://') $h = substr($h,8); 
-
         return array(
             'title' => __('Search this site from', 'widget-to-search-from-ofruru'). ' ofru.ru',
-            'siteurl' => $h,
             'helplink' => '1',
 	    'width' => '17',
             'lang' => 'ru'
