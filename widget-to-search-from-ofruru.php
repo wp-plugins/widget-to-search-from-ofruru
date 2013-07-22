@@ -5,7 +5,7 @@ Plugin URI: http://ofru.ru/widgets/?l=en
 Description: Enables a Custom Search Engine for your site via a widget. To add goto Appearance > Widgets. Thank you for choosing my widget.
 Author: Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)
 Donate link: http://ofru.ru/help/en/ 
-Version: 1.1.4
+Version: 1.1
 Author URI: http://ofru.ru/
 Text Domain: widget-to-search-from-ofruru
 Domain Path: /lang
@@ -14,16 +14,6 @@ Copyright 2013 Milyutin Aleksandr Vyacheslavovich (email : admin@ofru.ru)
 */
 
 
-
-function widget_to_search_from_ofruru_domain() {
-if (preg_match('/^www./', $_SERVER["HTTP_HOST"])) {
-$nowww = substr($_SERVER["HTTP_HOST"],4);
-} else {
-$nowww = $_SERVER["HTTP_HOST"];
-}
-return $nowww;
-}
- 
 class widget_to_search_from_ofruru extends WP_Widget {
 function widget_to_search_from_ofruru() {
 parent::WP_Widget('widget-to-search-from-ofruru', $name = __('Widget to search from ofru.ru', 'widget-to-search-from-ofruru'));
@@ -38,7 +28,7 @@ $instance = array_merge( $this->_get_default_options(), $instance );
 . $after_title;
 ?>
 <form target="_blank" action="http://allislocated.ru/" enctype="application/x-www-form-urlencoded" method="get">
-<input type="hidden" name="h" value="<?php if ($instance['h'] == 'www.') echo $instance['h']; echo widget_to_search_from_ofruru_domain(); ?>" />
+<input type="hidden" name="h" value="<?php echo $instance['siteurl']; ?>" />
 <input type="text" name="q" size="<?php echo $instance['width']; ?>" />
 <input type="hidden" name="l" value="<?php echo $instance['lang']; ?>" />
 <input type="submit" name="sa" value="<?php _e('Search'); ?>" />
@@ -49,9 +39,14 @@ $instance = array_merge( $this->_get_default_options(), $instance );
 
 function update($new_instance, $old_instance) {
 $instance = $old_instance;
+$h = get_option('siteurl');
+
+if (substr($h,0,7)=='http://') $h = substr($h,7);
+elseif (substr($h,0,8)=='https://') $h = substr($h,8); 
+
 $instance['title'] = esc_attr($new_instance['title']);
 $instance['lang'] = $new_instance['lang'];
-$instance['h'] = $new_instance['h']; 
+$instance['siteurl'] = $h; 
 $instance['helplink'] = $new_instance['helplink'];
 $instance['width'] = $new_instance['width'];
 return $instance;
@@ -60,7 +55,6 @@ return $instance;
 function form($instance) {
 $instance = array_merge( $this->_get_default_options(), $instance );	
 $title = esc_attr($instance['title']);
-$h = esc_attr($instance['h']);
 $lang = esc_attr($instance['lang']);
 $helplink = esc_attr($instance['helplink']);
 ?>
@@ -68,16 +62,6 @@ $helplink = esc_attr($instance['helplink']);
 <p>
 <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?>
 <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
-</label>
-</p>
-<p>
-<label for="<?php echo $this->get_field_id('h'); ?>"><?php _e('Domain:', 'widget-to-search-from-ofruru'); ?>
-<br>
-<label for='<?php echo $this->get_field_id('h'); ?>WWW'><input class="radio" id='<?php echo $this->get_field_id('h'); ?>WWW' type="radio" name="<?php echo $this->get_field_name('h'); ?>" value="www." <?php if ($h == 'www.') echo 'checked'; ?>><?php echo 'www.'. widget_to_search_from_ofruru_domain(); ?></label>
-<br>
-<?php _e('or', 'widget-to-search-from-ofruru'); ?>
-<br>
-<label for='<?php echo $this->get_field_id('h'); ?>NOWWW'><input class="radio" id="<?php echo $this->get_field_id('h'); ?>NOWWW" type="radio" name="<?php echo $this->get_field_name('h'); ?>" value="0" <?php if ($h == '0') echo 'checked'; ?>><?php echo  widget_to_search_from_ofruru_domain(); ?></label>
 </label>
 </p>
 <p>
@@ -100,9 +84,15 @@ $helplink = esc_attr($instance['helplink']);
 <?php
 }
  function _get_default_options() {
+
+$h = get_option('siteurl');
+
+if (substr($h,0,7)=='http://') $h = substr($h,7);
+elseif (substr($h,0,8)=='https://') $h = substr($h,8); 
+
         return array(
             'title' => __('Search this site from', 'widget-to-search-from-ofruru'). ' ofru.ru',
-            'h' => '0',
+            'siteurl' => $h,
             'helplink' => '1',
 	    'width' => '17',
             'lang' => 'ru'
