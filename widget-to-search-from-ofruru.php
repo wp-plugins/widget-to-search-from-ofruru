@@ -5,7 +5,7 @@ Plugin URI: http://ofru.ru/widgets/?l=en
 Description: Enables a Custom Search Engine for your site via a widget. To add goto Appearance > Widgets. Thank you for choosing my widget.
 Author: Milyutin Aleksandr Vyacheslavovich (Disabled by cerebral palsy)
 Donate link: http://ofru.ru/help/en/ 
-Version: 1.2.1
+Version: 1.2.2
 Author URI: http://ofru.ru/
 Text Domain: widget-to-search-from-ofruru
 Domain Path: /lang

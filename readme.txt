@@ -43,6 +43,9 @@ Installation
 
 
 == Upgrade Notice == 
+= 1.2.2 =
+* Fixed bug with translation into Russian
+
 = 1.2 =
 * Optimized php code
 * Includes support for mode: Multisite
@@ -50,6 +53,9 @@ Installation
 
 
 == Changelog ==
+= 1.2.2 =
+* Fixed bug with translation into Russian
+
 = 1.2 =
 * Optimized php code
 * Includes support for mode: Multisite
