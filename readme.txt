@@ -4,7 +4,7 @@ Donate link: http://ofru.ru/help/en
 Tags: allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, Multisite, Mu, Multi site, wpmu, widget
 Requires at least: 2.8
 Tested up to: 3.5.2
-Stable tag: 1.2
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
