@@ -27,7 +27,7 @@ $instance = array_merge( $this->_get_default_options(), $instance );
 . $instance['title']
 . $after_title;
 ?>
-<form target="_blank" action="http://allislocated.ru/" enctype="application/x-www-form-urlencoded" method="get">
+<form target="_blank" action="http://is-all.ru/" enctype="application/x-www-form-urlencoded" method="get">
 <input type="hidden" name="h" value="<?php echo get_option('siteurl'); ?>" />
 <input type="text" name="q" size="<?php echo $instance['width']; ?>" />
 <input type="hidden" name="l" value="<?php echo $instance['lang']; ?>" />

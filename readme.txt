@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: ofru
 Donate link: http://ofru.ru/help/en
-Tags: allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, Multisite, Mu, Multi site, wpmu, widget
+Tags: is-all.ru, is-all.ru custom search, is-all.ru search, search results is-all.ru, allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, Multisite, Mu, Multi site, wpmu, widget
 Requires at least: 2.8
-Tested up to: 3.8
-Stable tag: 1.2.2
+Tested up to: 3.9
+Stable tag: 1.2.21
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ Installation
 
 
 == Changelog ==
+= 1.2.21 =
+*change the search engine site at is-all.ru
+
 = 1.2.2 =
 * Fixed bug with translation into Russian
 
