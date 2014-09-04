@@ -3,8 +3,8 @@ Contributors: ofru
 Donate link: http://ofru.ru/help/en
 Tags: is-all.ru, is-all.ru custom search, is-all.ru search, search results is-all.ru, allislocated.ru, allislocated.ru custom search, allislocated.ru search, search results allislocated.ru, custom search, search, search results, site search, Multisite, Mu, Multi site, wpmu, widget
 Requires at least: 2.8
-Tested up to: 3.9
-Stable tag: 1.2.3
+Tested up to: 4.0
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Installation
 
 
 == Upgrade Notice == 
+= 1.2.4 =
+* Sorry, no new features this time… This release only updates the Compatibility-Tag to WordPress 4.0. Unfortunately there is no way to do this anymore without a new version.
+
 = 1.2.3 =
 * change the search engine site at is-all.ru
 
@@ -56,6 +59,9 @@ Installation
 
 
 == Changelog ==
+= 1.2.4 =
+* Sorry, no new features this time… This release only updates the Compatibility-Tag to WordPress 4.0. Unfortunately there is no way to do this anymore without a new version.
+
 = 1.2.3 =
 * change the search engine site at is-all.ru
 
